@@ -258,7 +258,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.352
+        "zoomFactor": 0.752
       },
       "objectsGroups": [],
       "variables": [
@@ -369,23 +369,6 @@
               "subInstructions": []
             }
           ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Repeat",
-          "repeatExpression": "",
-          "conditions": [],
-          "actions": [],
           "events": []
         }
       ],
