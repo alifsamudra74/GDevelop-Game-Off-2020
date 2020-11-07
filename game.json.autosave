@@ -258,7 +258,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.752
+        "zoomFactor": 0.352
       },
       "objectsGroups": [],
       "variables": [
@@ -349,26 +349,55 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreX"
+                "value": "AddForceVersPos"
               },
               "parameters": [
                 "Ball",
-                "+",
-                "2 * TimeDelta()"
+                "720 - Ball.Width()",
+                "999",
+                "60",
+                ""
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "PlayAnimation"
+                "value": "Rotate"
               },
               "parameters": [
-                "Ball"
+                "Ball",
+                "30",
+                ""
               ],
               "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Repeat",
+          "repeatExpression": "",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
           "events": []
         }
       ],

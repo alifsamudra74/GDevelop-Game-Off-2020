@@ -1,0 +1,20 @@
+Story:
+The moon is falling to the earth! The only way to stop it is to destroy it with a bomb. A young soccer player called Andra is chosen to kick the bomb
+straight to the moon. The future is in Andra's foot, can he kick it?
+
+Genre: Casual
+
+Mechanic:
+- Moon covering the top of the screen, slowly moving downward
+- Once the moon fall to the ground, game over
+- Moon have a certain hp, once depleted, player win
+- Player must destroy the moon by kicking it with a bomb
+- The bomb (shaped like a soccer ball) is moving sideways across the screen in front of the player's character
+- The player must match the ball timing with the kick
+- The ball must be right in the kick collision point for a kick to be registered
+- When successfully kicked, ball will launched to the moon then explode, reducing moon's hp by a certain value
+- A new ball will appear in front of the player character, then the loop continue
+
+Control:
+- Touch to kick
+- Then hold to determine the kick power
