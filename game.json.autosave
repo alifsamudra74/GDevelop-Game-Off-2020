@@ -226,6 +226,33 @@
         "name": "SoccerBall13.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Gawang.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Gawang.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Gawang_flipped.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Gawang_flipped.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Moon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Moon.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -265,6 +292,10 @@
         {
           "name": "iskick",
           "value": "0"
+        },
+        {
+          "name": "play",
+          "value": "1"
         }
       ],
       "instances": [
@@ -280,6 +311,38 @@
           "x": 21,
           "y": 999,
           "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 288,
+          "layer": "",
+          "locked": false,
+          "name": "Gawang",
+          "persistentUuid": "0a52fed3-a7fb-4c55-9754-ef442ac756d8",
+          "width": 718,
+          "x": 1,
+          "y": 256,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 719,
+          "layer": "",
+          "locked": false,
+          "name": "Moon",
+          "persistentUuid": "0ba6cb30-7b9a-443b-aa8d-89fdadf75342",
+          "width": 719,
+          "x": 0,
+          "y": -508,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -324,6 +387,84 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Gawang",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Gawang_flipped.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Moon",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Moon.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -343,6 +484,18 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosX"
+              },
+              "parameters": [
+                "Ball",
+                "<=",
+                "720 - Ball.Width()"
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -354,8 +507,8 @@
               "parameters": [
                 "Ball",
                 "720 - Ball.Width()",
-                "999",
-                "60",
+                "Ball.Y() + (Ball.Height() / 2)",
+                "40",
                 ""
               ],
               "subInstructions": []
@@ -379,8 +532,36 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "play",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Moon",
+                "Moon.X() + (Moon.Width() / 2)",
+                "Ball.Y()",
+                "40",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         },
         {
