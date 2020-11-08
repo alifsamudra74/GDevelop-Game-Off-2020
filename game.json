@@ -253,6 +253,24 @@
         "name": "Moon.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "groundGrass_mown.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "groundGrass_mown.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "football-pitch.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "football-pitch.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -301,15 +319,15 @@
       "instances": [
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
+          "customSize": true,
+          "height": 295,
+          "layer": "Props",
           "locked": false,
-          "name": "Ball",
-          "persistentUuid": "de47111d-12df-454d-b79a-fc184dc3e1a9",
-          "width": 0,
-          "x": 21,
-          "y": 999,
+          "name": "Gawang",
+          "persistentUuid": "3bbf925e-b787-4939-8bec-5b3c99aadc7e",
+          "width": 735,
+          "x": 0,
+          "y": 79,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -318,15 +336,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 288,
-          "layer": "",
+          "height": 1280,
+          "layer": "Props",
           "locked": false,
-          "name": "Gawang",
-          "persistentUuid": "0a52fed3-a7fb-4c55-9754-ef442ac756d8",
-          "width": 718,
-          "x": 1,
-          "y": 256,
-          "zOrder": 2,
+          "name": "GrassField",
+          "persistentUuid": "60c94b0d-993e-4882-96fa-9b1addf22993",
+          "width": 720,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -335,14 +353,30 @@
           "angle": 0,
           "customSize": true,
           "height": 719,
-          "layer": "",
+          "layer": "Gameplay",
           "locked": false,
           "name": "Moon",
-          "persistentUuid": "0ba6cb30-7b9a-443b-aa8d-89fdadf75342",
+          "persistentUuid": "3b5b9cba-e694-4846-b085-8b690e5ca6f8",
           "width": 719,
           "x": 0,
-          "y": -508,
-          "zOrder": 3,
+          "y": -522,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Gameplay",
+          "locked": false,
+          "name": "Ball",
+          "persistentUuid": "d46c0ad2-5c92-4370-ade8-e8d17c7d3b68",
+          "width": 0,
+          "x": 15,
+          "y": 965,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -446,6 +480,45 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Moon.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "GrassField",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "football-pitch.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -604,6 +677,28 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6000560,
+          "ambientLightColorR": 67108864,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Props",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 1886351952,
+          "ambientLightColorR": 67108864,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Gameplay",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": []
@@ -667,7 +762,20 @@
     }
   ],
   "externalEvents": [],
-  "eventsFunctionsExtensions": [],
+  "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "description": "",
+      "extensionNamespace": "",
+      "fullName": "",
+      "name": "NewExtension",
+      "shortDescription": "",
+      "tags": "",
+      "version": "",
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": []
+    }
+  ],
   "externalLayouts": [],
   "externalSourceFiles": []
 }
