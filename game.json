@@ -271,6 +271,15 @@
         "name": "football-pitch.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "RightTrigger-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "RightTrigger-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -314,6 +323,10 @@
         {
           "name": "play",
           "value": "1"
+        },
+        {
+          "name": "BallMove",
+          "value": "0"
         }
       ],
       "instances": [
@@ -358,8 +371,8 @@
           "name": "Moon",
           "persistentUuid": "3b5b9cba-e694-4846-b085-8b690e5ca6f8",
           "width": 719,
-          "x": 0,
-          "y": -522,
+          "x": 361,
+          "y": -187,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -374,9 +387,41 @@
           "name": "Ball",
           "persistentUuid": "d46c0ad2-5c92-4370-ade8-e8d17c7d3b68",
           "width": 0,
-          "x": 15,
+          "x": 68,
           "y": 965,
           "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "RightTrigger",
+          "persistentUuid": "7fe967ba-20aa-417b-a8f5-109d97d35969",
+          "width": 0,
+          "x": 655,
+          "y": 965,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "LeftTrigger",
+          "persistentUuid": "2a4cf20f-f470-4e00-bb20-13a26150a24d",
+          "width": 0,
+          "x": 0,
+          "y": 965,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -483,8 +528,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 233,
+                        "y": 233
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -538,6 +583,122 @@
               ]
             }
           ]
+        },
+        {
+          "name": "LeftTrigger",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "RightTrigger",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "RightTrigger-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RightTrigger",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "RightTrigger",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "RightTrigger-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -552,21 +713,9 @@
                 "value": "VarScene"
               },
               "parameters": [
-                "iskick",
+                "BallMove",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "PosX"
-              },
-              "parameters": [
-                "Ball",
-                "<=",
-                "720 - Ball.Width()"
               ],
               "subInstructions": []
             }
@@ -581,7 +730,7 @@
                 "Ball",
                 "720 - Ball.Width()",
                 "Ball.Y() + (Ball.Height() / 2)",
-                "40",
+                "100",
                 ""
               ],
               "subInstructions": []
@@ -593,7 +742,103 @@
               },
               "parameters": [
                 "Ball",
-                "30",
+                "60",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "BallMove",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Ball",
+                "0 + Ball.Width()",
+                "Ball.Y() + (Ball.Height() / 2)",
+                "100",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Rotate"
+              },
+              "parameters": [
+                "Ball",
+                "-60",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "BallMove",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Ball",
+                "Moon.X()",
+                "Moon.Y()",
+                "350",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Rotate"
+              },
+              "parameters": [
+                "Ball",
+                "60",
                 ""
               ],
               "subInstructions": []
@@ -627,8 +872,8 @@
               },
               "parameters": [
                 "Moon",
-                "Moon.X() + (Moon.Width() / 2)",
-                "Ball.Y()",
+                "Moon.X()",
+                "1260 - (Moon.Height() / 2)",
                 "40",
                 ""
               ],
@@ -640,18 +885,168 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Repeat",
-          "repeatExpression": "",
-          "conditions": [],
-          "actions": [],
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Ball",
+                "RightTrigger",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BallMove",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         },
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Ball",
+                "LeftTrigger",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BallMove",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Ball",
+                "Moon",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "Ball",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "CreateByName"
+              },
+              "parameters": [
+                "",
+                "Ball",
+                "\"Ball\"",
+                "68",
+                "965",
+                "\"Gameplay\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BallMove",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Space"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BallMove",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         }
       ],
@@ -679,7 +1074,7 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 6000560,
           "ambientLightColorR": 67108864,
           "followBaseLayerCamera": false,
@@ -690,8 +1085,8 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
-          "ambientLightColorG": 1886351952,
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 1886352000,
           "ambientLightColorR": 67108864,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
