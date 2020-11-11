@@ -291,8 +291,8 @@
     {
       "b": 255,
       "disableInputWhenNotFocused": true,
-      "mangledName": "New_32scene",
-      "name": "New scene",
+      "mangledName": "Gameplay",
+      "name": "Gameplay",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -327,25 +327,13 @@
         {
           "name": "BallMove",
           "value": "0"
+        },
+        {
+          "name": "MoonHP",
+          "value": "10"
         }
       ],
       "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 295,
-          "layer": "Props",
-          "locked": false,
-          "name": "Gawang",
-          "persistentUuid": "3bbf925e-b787-4939-8bec-5b3c99aadc7e",
-          "width": 735,
-          "x": 0,
-          "y": 79,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
         {
           "angle": 0,
           "customSize": true,
@@ -357,38 +345,6 @@
           "width": 720,
           "x": 0,
           "y": 0,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 719,
-          "layer": "Gameplay",
-          "locked": false,
-          "name": "Moon",
-          "persistentUuid": "3b5b9cba-e694-4846-b085-8b690e5ca6f8",
-          "width": 719,
-          "x": 361,
-          "y": -187,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "Gameplay",
-          "locked": false,
-          "name": "Ball",
-          "persistentUuid": "d46c0ad2-5c92-4370-ade8-e8d17c7d3b68",
-          "width": 0,
-          "x": 68,
-          "y": 965,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -422,6 +378,70 @@
           "x": 0,
           "y": 965,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "LoseTrigger",
+          "persistentUuid": "3c71057f-4124-4c64-bbb4-c7c4bbe9fcb8",
+          "width": 0,
+          "x": 330,
+          "y": 1213,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 290,
+          "layer": "Props",
+          "locked": false,
+          "name": "Gawang",
+          "persistentUuid": "8bbde623-1ea0-4fa3-862f-8cf0a3bbb48b",
+          "width": 720,
+          "x": 0,
+          "y": 87,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Gameplay",
+          "locked": false,
+          "name": "Ball",
+          "persistentUuid": "ceee03d7-1fea-42a2-b846-db6171839805",
+          "width": 0,
+          "x": 68,
+          "y": 965,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 722,
+          "layer": "Gameplay",
+          "locked": false,
+          "name": "Moon",
+          "persistentUuid": "7001c941-60d7-476a-926f-ba3b40a799d2",
+          "width": 722,
+          "x": 360,
+          "y": -180,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -643,6 +663,64 @@
           ]
         },
         {
+          "name": "LoseTrigger",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "RightTrigger",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "RightTrigger-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "RightTrigger",
           "tags": "",
           "type": "Sprite",
@@ -713,9 +791,90 @@
                 "value": "VarScene"
               },
               "parameters": [
+                "play",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Moon",
+                "Moon.X()",
+                "1260 - (Moon.Height() / 2)",
+                "40",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "play",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PushScene"
+              },
+              "parameters": [
+                "",
+                "Win"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
                 "BallMove",
                 "=",
                 "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "play",
+                "=",
+                "1"
               ],
               "subInstructions": []
             }
@@ -762,6 +921,18 @@
               },
               "parameters": [
                 "BallMove",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "play",
                 "=",
                 "1"
               ],
@@ -857,9 +1028,9 @@
                 "value": "VarScene"
               },
               "parameters": [
-                "play",
+                "MoonHP",
                 "=",
-                "1"
+                "0"
               ],
               "subInstructions": []
             }
@@ -868,14 +1039,23 @@
             {
               "type": {
                 "inverted": false,
-                "value": "AddForceVersPos"
+                "value": "Delete"
               },
               "parameters": [
                 "Moon",
-                "Moon.X()",
-                "1260 - (Moon.Height() / 2)",
-                "40",
-                ""
+                "Moon"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "play",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -989,12 +1169,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "CreateByName"
+                "value": "Create"
               },
               "parameters": [
                 "",
                 "Ball",
-                "\"Ball\"",
                 "68",
                 "965",
                 "\"Gameplay\""
@@ -1010,6 +1189,18 @@
                 "BallMove",
                 "=",
                 "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "MoonHP",
+                "-",
+                "1"
               ],
               "subInstructions": []
             }
@@ -1031,6 +1222,18 @@
                 "Space"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "play",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -1043,6 +1246,41 @@
                 "BallMove",
                 "=",
                 "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Moon",
+                "LoseTrigger",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PushScene"
+              },
+              "parameters": [
+                "",
+                "Lose"
               ],
               "subInstructions": []
             }
@@ -1085,9 +1323,9 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453632,
-          "ambientLightColorG": 1886352000,
-          "ambientLightColorR": 67108864,
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6000560,
+          "ambientLightColorR": 100663296,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Gameplay",
@@ -1101,8 +1339,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "New_32scene2",
-      "name": "New scene2",
+      "mangledName": "Win",
+      "name": "Win",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
