@@ -280,6 +280,51 @@
         "name": "RightTrigger-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "scorch_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "scorch_03.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Dokumen/Scene Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Dokumen\\Scene Background.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "grey_panel.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "grey_panel.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "green_button00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "green_button00.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "../../../UI Base Pack/PNG/green_button00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "..\\..\\..\\UI Base Pack\\PNG\\green_button00.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -288,6 +333,554 @@
   "objectsGroups": [],
   "variables": [],
   "layouts": [
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Start",
+      "name": "Start",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 5.5
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1280,
+          "layer": "",
+          "locked": false,
+          "name": "SceneBackground",
+          "persistentUuid": "24ec21ec-164b-4cdb-bb40-10fb3d646e8c",
+          "width": 720,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 427,
+          "layer": "Menu",
+          "locked": false,
+          "name": "MenuPanel",
+          "persistentUuid": "60bfdcde-145e-40b3-a227-98c64da85f76",
+          "width": 427,
+          "x": 360,
+          "y": 640,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 91,
+          "layer": "Menu",
+          "locked": false,
+          "name": "StartButton",
+          "persistentUuid": "dd3c16f1-6c4c-4c6c-918e-f4b99e2a8335",
+          "width": 353,
+          "x": 360,
+          "y": 550,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 91,
+          "layer": "Menu",
+          "locked": false,
+          "name": "ExitButton",
+          "persistentUuid": "0007f40a-447d-4fe7-b040-e14a45992ff0",
+          "width": 353,
+          "x": 360,
+          "y": 750,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Menu",
+          "locked": false,
+          "name": "StartText",
+          "persistentUuid": "65a2b104-bcd6-4f82-b1e6-e3cc831b1f5b",
+          "width": 0,
+          "x": 272,
+          "y": 502,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Menu",
+          "locked": false,
+          "name": "ExitText",
+          "persistentUuid": "9fbcb652-2e55-4e1d-a323-b070b4290590",
+          "width": 0,
+          "x": 290,
+          "y": 702,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "SceneBackground",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Dokumen\\Scene Background.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MenuPanel",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "grey_panel.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 50,
+                        "y": 50
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "StartButton",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "green_button00.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 95,
+                        "y": 25
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ExitButton",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "green_button00.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 95,
+                        "y": 25
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "StartText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Start",
+          "font": "",
+          "characterSize": 84,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "ExitText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Exit",
+          "font": "",
+          "characterSize": 84,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisX"
+              },
+              "parameters": [
+                "",
+                "<=",
+                "536",
+                "\"Menu\"",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisX"
+              },
+              "parameters": [
+                "",
+                ">=",
+                "184",
+                "\"Menu\"",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisY"
+              },
+              "parameters": [
+                "",
+                ">=",
+                "504",
+                "\"Menu\"",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisY"
+              },
+              "parameters": [
+                "",
+                "<=",
+                "595",
+                "\"Menu\"",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisBouton"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Gameplay\"",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisX"
+              },
+              "parameters": [
+                "",
+                "<=",
+                "536",
+                "\"Menu\"",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisX"
+              },
+              "parameters": [
+                "",
+                ">=",
+                "184",
+                "\"Menu\"",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisY"
+              },
+              "parameters": [
+                "",
+                ">=",
+                "704",
+                "\"Menu\"",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisY"
+              },
+              "parameters": [
+                "",
+                "<=",
+                "795",
+                "\"Menu\"",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisBouton"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Quit"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 0,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 6248312,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 11,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Background",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6000560,
+          "ambientLightColorR": -2147483632,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Menu",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
     {
       "b": 255,
       "disableInputWhenNotFocused": true,
@@ -312,7 +905,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.452
+        "zoomFactor": 0.352
       },
       "objectsGroups": [],
       "variables": [
@@ -409,22 +1002,6 @@
           "width": 720,
           "x": 0,
           "y": 87,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 722,
-          "layer": "Gameplay",
-          "locked": false,
-          "name": "Moon",
-          "persistentUuid": "7001c941-60d7-476a-926f-ba3b40a799d2",
-          "width": 722,
-          "x": 360,
-          "y": -180,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -896,11 +1473,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PushScene"
+                "value": "Scene"
               },
               "parameters": [
                 "",
-                "Win"
+                "Win",
+                "yes"
               ],
               "subInstructions": []
             }
@@ -1348,11 +1926,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PushScene"
+                "value": "Scene"
               },
               "parameters": [
                 "",
-                "Lose"
+                "Lose",
+                "yes"
               ],
               "subInstructions": []
             }
@@ -1376,6 +1955,32 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Moon",
+                "360",
+                "-140",
+                "\"Gameplay\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeScale"
+              },
+              "parameters": [
+                "Moon",
+                "*",
+                "1.6"
+              ],
+              "subInstructions": []
+            },
             {
               "type": {
                 "inverted": false,
@@ -1441,9 +2046,9 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453632,
+          "ambientLightColorB": 1702453580,
           "ambientLightColorG": 6000560,
-          "ambientLightColorR": 100663296,
+          "ambientLightColorR": 67108864,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Gameplay",
