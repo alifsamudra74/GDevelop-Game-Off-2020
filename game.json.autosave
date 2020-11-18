@@ -334,6 +334,41 @@
         "name": "grey_button00.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "Mission Plausible.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Mission Plausible.ogg",
+        "userAdded": true
+      },
+      {
+        "file": "Drumming Sticks.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Drumming Sticks.ogg",
+        "userAdded": true
+      },
+      {
+        "file": "Explosion.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Explosion.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Laser_Shoot2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Laser_Shoot2.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Jump14.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Jump14.wav",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -678,55 +713,46 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SourisX"
+                "value": "DepartScene"
               },
               "parameters": [
-                "",
-                "<=",
-                "536",
-                "\"Menu\"",
                 ""
               ],
               "subInstructions": []
-            },
+            }
+          ],
+          "actions": [
             {
               "type": {
                 "inverted": false,
-                "value": "SourisX"
+                "value": "PlayMusic"
               },
               "parameters": [
                 "",
-                ">=",
-                "184",
-                "\"Menu\"",
+                "Mission Plausible.ogg",
+                "yes",
+                "100",
                 ""
               ],
               "subInstructions": []
-            },
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
               "type": {
                 "inverted": false,
-                "value": "SourisY"
+                "value": "SourisSurObjet"
               },
               "parameters": [
+                "StartButton",
                 "",
-                ">=",
-                "504",
-                "\"Menu\"",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisY"
-              },
-              "parameters": [
                 "",
-                "<=",
-                "595",
-                "\"Menu\"",
                 ""
               ],
               "subInstructions": []
@@ -755,6 +781,18 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Score",
+                "=",
+                "100"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -767,67 +805,24 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SourisX"
-              },
-              "parameters": [
-                "",
-                "<=",
-                "536",
-                "\"Menu\"",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisX"
-              },
-              "parameters": [
-                "",
-                ">=",
-                "184",
-                "\"Menu\"",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisY"
-              },
-              "parameters": [
-                "",
-                ">=",
-                "704",
-                "\"Menu\"",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisY"
-              },
-              "parameters": [
-                "",
-                "<=",
-                "795",
-                "\"Menu\"",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "SourisBouton"
               },
               "parameters": [
                 "",
                 "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "ExitButton",
+                "",
+                "",
+                ""
               ],
               "subInstructions": []
             }
@@ -919,7 +914,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.352
+        "zoomFactor": 0.652
       },
       "objectsGroups": [],
       "variables": [
@@ -1623,18 +1618,6 @@
                 ""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "play",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
             }
           ],
           "actions": [
@@ -1713,6 +1696,32 @@
                 "\"Moon HP: \" + VariableString(MoonHP)"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "play",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Drumming Sticks.ogg",
+                "yes",
+                "45",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -1747,40 +1756,6 @@
                 "1260 - (Moon.Height() / 2)",
                 "70",
                 ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": true,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "play",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "Win",
-                "yes"
               ],
               "subInstructions": []
             }
@@ -2165,6 +2140,20 @@
                 "\"Moon HP: \" + VariableString(MoonHP)"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Explosion.wav",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -2185,6 +2174,52 @@
                 "",
                 "",
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "play",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Lose\"",
+                "no"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "Score",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -2272,6 +2307,20 @@
                 "2"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Laser_Shoot2.wav",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -2343,6 +2392,20 @@
                 "\"Score: \" + GlobalVariableString(Score)"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Jump14.wav",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -2378,7 +2441,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Props",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         },
@@ -2431,7 +2494,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 2.3
+        "zoomFactor": 0.3
       },
       "objectsGroups": [],
       "variables": [],
@@ -2940,7 +3003,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 2.3
+        "zoomFactor": 0.4
       },
       "objectsGroups": [],
       "variables": [],
